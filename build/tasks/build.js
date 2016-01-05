@@ -45,7 +45,9 @@ gulp.task('build-css', function() {
 // https://www.npmjs.com/package/gulp-run-sequence
 gulp.task('build', function(callback) {
   return runSequence(
+    /* don't clean, dist folder could contain application bundles
     'clean',
+    */
     ['build-system', 'build-html', 'build-css'],
     callback
   );
