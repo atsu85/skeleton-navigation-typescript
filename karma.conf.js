@@ -7,6 +7,7 @@ module.exports = function(config) {
       config: {
         paths: {
           "*": null,
+          "bundled-*": "dist/bundled-*",
           "src/*": "src/*",
           "typescript": "node_modules/typescript/lib/typescript.js",
           "systemjs": "node_modules/systemjs/dist/system.js",
@@ -25,6 +26,7 @@ module.exports = function(config) {
       },
       serveFiles: [
         'src/**/*.ts',
+        'dist/bundled-*.js',
         'jspm_packages/**/*.js'
       ]
     },
