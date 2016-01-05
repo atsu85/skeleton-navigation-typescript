@@ -1,6 +1,6 @@
 {
   "bundles": {
-    "dist/app-build": {
+    "dist/bundled-app": {
       "includes": [
         "[*]",
         "*.html!text",
@@ -11,7 +11,7 @@
         "minify": true
       }
     },
-    "dist/aurelia": {
+    "dist/bundled-aurelia": {
       "includes": [
         "aurelia-framework",
         "aurelia-bootstrapper",
