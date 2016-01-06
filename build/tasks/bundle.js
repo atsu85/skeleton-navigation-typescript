@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var bundler = require('aurelia-bundler');
 var bundles = require('../bundles.json');
+var paths = require('../paths');
 
 var config = {
   force: true,
@@ -37,9 +38,9 @@ function getBundleConfig(config, onlyAurelia) {
 	if(onlyAurelia == null) {
 		// do nothing
 	} else if (onlyAurelia) {
-		delete config.bundles["dist/bundled-app"];
+		delete config.bundles[paths.output + "bundled-app"];
 	} else if (onlyAurelia) {
-		delete config.bundles["dist/bundled-aurelia"];
+		delete config.bundles[paths.output + "bundled-aurelia"];
 	}
 	return config
 }
